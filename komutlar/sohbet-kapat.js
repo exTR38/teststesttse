@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
+        if (!message.member.hasPermission('ADMINISTRATOR'))
+        return message.channel.send(" Yetersiz **yetki!**")
   let every = message.guild.roles.cache.find(r => r.name === "@everyone");
  message.channel.createOverwrite(every, {
     SEND_MESSAGES: false

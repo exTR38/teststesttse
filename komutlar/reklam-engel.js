@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json');
 
-exports.run = async(client, message, args) => {
+exports.run = async (client, message, args) => {
+      if (!message.member.hasPermission('ADMINISTRATOR'))
+        return message.channel.send(" Yetersiz **yetki!**")
 
   let prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
 

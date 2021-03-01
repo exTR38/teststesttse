@@ -6,12 +6,12 @@ exports.run = async (client, message, args) => {
   
 const istatistikler = new Discord.MessageEmbed()
   .addField(`:scroll: »  Pingim` ,`${client.ws.ping}ms`,true)
-  .addField(`:incoming_envelope: » Yapımcım` ,`<@536965289598779395>`,true)
+  .addField(`:incoming_envelope: » Yapımcım` ,`<@609093740157599796>`,true)
   .addField(`:label: » Node.js`, `${process.version}`, true)
  .addField(`:bar_chart: » Kanal Sayısı`, `${client.channels.cache.size  }`, true)
  .addField(`:postbox: » Kullanıcı Sayısı`, `${client.users.cache.size}`, true)
  .addField(`:envelope: » Sunucu Sayısı`, `${client.guilds.cache.size}`, true)
- .addField(`» Linkler`, `[Destek Sunucusu](https://discord.gg) | [Youtube](https://www.youtube.com/c/ukqzn`, true)
+ .addField(`» Linkler`, `[Destek Sunucusu](https://discord.gg) | [Youtube](https://www.youtube.com/`, true)
   message.channel.send(istatistikler)
   
   
